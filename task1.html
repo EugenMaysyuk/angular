@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="task1" ng-strict-di>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>AngularJS Training</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html">
+                        AngularJS Training
+                    </a>
+                </li>
+                <li>
+                    <a href="task1.html">Task 1</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row content">
+
+                    <h1> Task 1 </h1>
+
+                    <div class="col-lg-12 task1">
+
+                        <div ng-init="data.sharedValue=''">
+
+                        <div ng-controller='parentCtrl1'>
+
+                            <input type="text" ng-model="data.sharedValue"/> 
+                            <div class="output">Output: {{data.sharedValue}}</div> 
+
+                            <div class="child" ng-controller='childCtrl1'>
+                                <input type="text" ng-model="data.sharedValue"/> 
+                                <div class="output">Output: {{data.sharedValue}}</div>        
+                            </div> 
+
+                            <div class="child" ng-controller='childCtrl2'>
+                                <input type="text" ng-model="data.sharedValue"/> 
+                                <div class="output">Output: {{data.sharedValue}}</div>     
+                            </div>   
+
+                        </div>
+
+                        <div ng-controller='parentCtrl2'>
+                            <input type="text" ng-model="data.sharedValue"/> 
+                            <div class="output">Output: {{data.sharedValue}}</div>     
+                        </div> 
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

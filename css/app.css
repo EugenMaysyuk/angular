@@ -1,0 +1,18 @@
+.content {
+	text-align:center;
+}
+
+.task1 {
+	top:50%;
+}
+
+.task1 input, .task1 .output {
+	display: inline-block;
+	margin: 2px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.output {
+	width: 40px;
+}
